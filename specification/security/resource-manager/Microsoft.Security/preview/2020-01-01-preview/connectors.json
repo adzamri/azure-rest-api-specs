@@ -76,7 +76,7 @@
     "/subscriptions/{subscriptionId}/providers/Microsoft.Security/connectors/{connectorName}": {
       "get": {
         "x-ms-examples": {
-          "Get aa connector subscribed to the subscription": {
+          "Get the connector subscribed to the subscription": {
             "$ref": "./examples/Connectors/GetConnectorSubscription_example.json"
           }
         },
@@ -299,17 +299,17 @@
             "values": [
               {
                 "value": "On",
-                "description": "Install missing Azure Arc agent on VMs automatically"
+                "description": "Install missing Azure Arc agent on machines automatically"
               },
               {
                 "value": "Off",
-                "description": "Do not install Azure Arc agent on the VMs automatically"
+                "description": "Do not install Azure Arc agent on the machines automatically"
               }
             ]
           }
         },
         "hybridComputeSettings": {
-          "description": "Settings for hybrid compute management, these settings are relevant only arcAutoProvision is 'On'.",
+          "description": "Settings for hybrid compute management, these settings are relevant only if arcAutoProvision is set to 'On'.",
           "type": "object",
           "$ref": "#/definitions/HybridComputeSettingsProperties"
         }
@@ -410,7 +410,7 @@
       "name": "connectorSetting",
       "in": "body",
       "required": true,
-      "description": "The connector setting to connect to a account",
+      "description": "The connector setting to connect to an account",
       "schema": {
         "$ref": "#/definitions/ConnectorSetting"
       },
